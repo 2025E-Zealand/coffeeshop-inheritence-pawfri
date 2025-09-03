@@ -4,18 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoffeeShopConsoleAppNet60
-{
-    public class BlackCoffee : Coffee
-    {
-        public BlackCoffee(int discount, string name) 
-            : base(discount, name)
-        {
-        }
+namespace CoffeeShopConsoleAppNet60;
 
-        public override string Strength()
-        {
-            return "Strong";
-        }
+public class BlackCoffee : Coffee
+{
+    public BlackCoffee(int discount, string name) 
+        : base(discount, name)
+    {
+    }
+
+    public override string Strength()
+    {
+        return "Strong";
     }
 }

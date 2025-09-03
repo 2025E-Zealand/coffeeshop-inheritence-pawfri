@@ -4,37 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoffeeShopConsoleAppNet60
+namespace CoffeeShopConsoleAppNet60;
+
+public abstract class Coffee : IMilk
 {
-    public abstract class Coffee : IMilk
+    public string Name { get; set; }
+    public int Discount { get; set; }
+
+    protected Coffee(int discount, string name)
     {
-        public string Name { get; set; }
-        public int Discount { get; set; }
+        Discount = discount;
+        Name = name;
+    }
 
-        protected Coffee(int discount, string name)
+    public virtual int Price()
+    {
+        if (Discount <= 5)
         {
-            Discount = discount;
-            Name = name;
+            return 20 - Discount;
         }
-
-        public virtual int Price()
+        else
         {
-            if (Discount <= 5)
-            {
-                return 20 - Discount;
-            }
-            else
-            {
-                throw new ArgumentException("The Discount is too large, decrease it to maximumu 5 kr.");
-            }
-             
+            throw new ArgumentException("The Discount is too large, decrease it to maximumu 5 kr.");
         }
+         
+    }
 
-        public abstract string Strength();
+    public abstract string Strength();
 
-        public int mlMilk()
-        {
-            return 0;
-        }
+    public int mlMilk()
+    {
+        return 0;
     }
 }
