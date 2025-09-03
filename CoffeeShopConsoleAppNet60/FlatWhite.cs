@@ -8,8 +8,11 @@ namespace CoffeeShopConsoleAppNet60;
 
 public class FlatWhite : Coffee, IMilk
 {
+    public string Suggar { get; set; }
+    public string GrapeWine { get; set; }
+    
     public FlatWhite(int discount, string name)
-: base(discount, name)
+        : base(discount, name)
     {
     }
 
