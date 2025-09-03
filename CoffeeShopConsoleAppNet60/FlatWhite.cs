@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopConsoleAppNet60
 {
-    public class Latte : Coffee, IMilk
+    public class FlatWhite : Coffee, IMilk
     {
-        public Latte(int discount, string name) 
-            : base(discount, name)
+        public FlatWhite(int discount, string name)
+    : base(discount, name)
         {
         }
 
@@ -17,7 +17,7 @@ namespace CoffeeShopConsoleAppNet60
         {
             if (Discount <= 5)
             {
-                return 40 - Discount;
+                return 25 - Discount;
             }
             else
             {
@@ -27,12 +27,12 @@ namespace CoffeeShopConsoleAppNet60
 
         public override string Strength()
         {
-            return "Weak";
+            return "Medium";
         }
 
         public int mlMilk()
         {
-            return 200;
+            return 40;
         }
     }
 }

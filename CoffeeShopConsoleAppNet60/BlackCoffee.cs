@@ -8,8 +8,8 @@ namespace CoffeeShopConsoleAppNet60
 {
     public class BlackCoffee : Coffee
     {
-        public BlackCoffee(int discount) 
-            : base(discount)
+        public BlackCoffee(int discount, string name) 
+            : base(discount, name)
         {
         }
 

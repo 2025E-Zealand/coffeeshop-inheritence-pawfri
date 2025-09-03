@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopConsoleAppNet60
 {
-    public abstract class Coffee
+    public abstract class Coffee : IMilk
     {
+        public string Name { get; set; }
         public int Discount { get; set; }
 
-        protected Coffee(int discount)
+        protected Coffee(int discount, string name)
         {
             Discount = discount;
+            Name = name;
         }
 
         public virtual int Price()
@@ -29,5 +31,10 @@ namespace CoffeeShopConsoleAppNet60
         }
 
         public abstract string Strength();
+
+        public int mlMilk()
+        {
+            return 0;
+        }
     }
 }
