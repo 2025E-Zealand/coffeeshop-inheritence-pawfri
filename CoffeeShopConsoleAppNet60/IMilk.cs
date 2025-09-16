@@ -8,5 +8,5 @@ namespace CoffeeShopConsoleAppNet60;
 
 public interface IMilk
 {
-    int mlMilk();
+    public int mlMilk();
 }
